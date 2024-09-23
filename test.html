@@ -1,34 +1,67 @@
+<!-- <html lang="en" data-theme="light"> -->
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <title>Toggle Buttons</title>
+  <script defer src="script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
-      <!-- ------ -->
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <!-- img -->
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-          src="https://dummyimage.com/400x400">
-        <!-- Text content -->
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+<body class="bg-gray-100 p-6">
 
-          <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia
-            microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-            seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo
-            tattooed umami cardigan.</p>
-        </div>
-      </div>
+  <!-- First Div (Buttons) -->
+  <div class="mb-4">
+    <button id="sendMoneyBtn" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded cursor-pointer mr-2">Send
+      Money</button>
+    <button id="cashOutBtn" class="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded cursor-pointer mr-2">Cash
+      Out</button>
+  </div>
+
+  <!-- Second Div (Content) -->
+  <div id="content" class="p-4 border rounded bg-white shadow">
+    <div id="sendMoneySection">
+      <h2 class="text-xl font-bold">Send Money</h2>
+      <p>Here you can send money to others.</p>
     </div>
-  </section>
+    <div id="cashOutSection" class="hidden">
+      <h2 class="text-xl font-bold">Cash Out</h2>
+      <p>Here you can cash out your balance.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sendMoneyBtn = document.getElementById('sendMoneyBtn');
+      const cashOutBtn = document.getElementById('cashOutBtn');
+      const sendMoneySection = document.getElementById('sendMoneySection');
+      const cashOutSection = document.getElementById('cashOutSection');
+
+      // Handle Send Money Button Click
+      sendMoneyBtn.addEventListener('click', () => {
+        sendMoneyBtn.classList.add('bg-blue-500', 'text-white');
+        sendMoneyBtn.classList.remove('bg-gray-200', 'text-gray-800');
+        cashOutBtn.classList.add('bg-gray-200', 'text-gray-800');
+        cashOutBtn.classList.remove('bg-blue-500', 'text-white');
+
+        sendMoneySection.classList.remove('hidden');
+        cashOutSection.classList.add('hidden');
+      });
+
+      // Handle Cash Out Button Click
+      cashOutBtn.addEventListener('click', () => {
+        cashOutBtn.classList.add('bg-blue-500', 'text-white');
+        cashOutBtn.classList.remove('bg-gray-200', 'text-gray-800');
+        sendMoneyBtn.classList.add('bg-gray-200', 'text-gray-800');
+        sendMoneyBtn.classList.remove('bg-blue-500', 'text-white');
+
+        cashOutSection.classList.remove('hidden');
+        sendMoneySection.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 
 </html>
