@@ -42,6 +42,7 @@ document
       const totalSub =
         totalBalance('main-balance') - getInputById('noakhali-input');
       document.getElementById('main-balance').innerText = totalSub;
+      document.getElementById('my_modal_5').showModal();
     }
   });
 
@@ -70,6 +71,7 @@ document
       const totalSub =
         totalBalance('main-balance') - getInputById('feni-input');
       document.getElementById('main-balance').innerText = totalSub;
+      document.getElementById('my_modal_5').showModal();
     }
   });
 
@@ -98,5 +100,6 @@ document
       const totalSub =
         totalBalance('main-balance') - getInputById('quota-input');
       document.getElementById('main-balance').innerText = totalSub;
+      document.getElementById('my_modal_5').showModal();
     }
   });

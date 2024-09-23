@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="./assets/coin.png" type="image/x-icon">
 
     <style>
-        .myLime{
+        .myLime {
             background-color: #B4F461;
         }
     </style>
@@ -100,9 +100,24 @@
                         </p>
                         <input id="noakhali-input" type="text" autocomplete="off" placeholder="Write Donation Amount"
                             class="block md:mb-0 mb-4 input input-bordered w-full" />
-                        <button id="noakhali-donate-button"
+                        <button id="noakhali-donate-button" onclick="my_modal_5.showModal()"
                             class="block bg-[#B4F461] py-4 px-8 rounded-lg text-xl font-semibold text-[#111] hover:bg-gray-400 transition">Donate
-                            Now</button>
+                            Now
+                        </button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box flex flex-col items-center">
+                                <h3 class="text-3xl font-bold text-center">Congrates!</h3>
+                                <img class="w-[8%]" src="./assets/coin.png" alt="coin pic">
+                                <p class="py-4">You Have Donate for Humankind</p>
+                                <h3 class="text-xl font-bold">Successfully</h3>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -134,9 +149,24 @@
                         </p>
                         <input id="feni-input" type="text" autocomplete="off" placeholder="Write Donation Amount"
                             class="block md:mb-0 mb-4 input input-bordered w-full" />
-                        <button id="feni-donate-button"
+                        <button id="feni-donate-button" onclick="my_modal_5.showModal()"
                             class="block bg-[#B4F461] py-4 px-8 rounded-lg text-xl font-semibold text-[#111] hover:bg-gray-400 transition">Donate
-                            Now</button>
+                            Now
+                        </button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle"></dialog>
+                            <div class="modal-box flex flex-col items-center">
+                                <h3 class="text-3xl font-bold text-center">Congrates!</h3>
+                                <img class="w-[8%]" src="./assets/coin.png" alt="coin pic">
+                                <p class="py-4">You Have Donate for Humankind</p>
+                                <h3 class="text-xl font-bold">Successfully</h3>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -168,9 +198,24 @@
                         </p>
                         <input id="quota-input" type="text" placeholder="Write Donation Amount" autocomplete="off"
                             class="block md:mb-0 mb-4 input input-bordered w-full" />
-                        <button id="quota-donate-button"
+                        <button id="quota-donate-button" onclick="my_modal_5.showModal()"
                             class="block bg-[#B4F461] py-4 px-8 rounded-lg text-xl font-semibold text-[#111] hover:bg-gray-400 transition">Donate
-                            Now</button>
+                            Now
+                        </button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle"></dialog>
+                            <div class="modal-box flex flex-col items-center">
+                                <h3 class="text-3xl font-bold text-center">Congrates!</h3>
+                                <img class="w-[8%]" src="./assets/coin.png" alt="coin pic">
+                                <p class="py-4">You Have Donate for Humankind</p>
+                                <h3 class="text-xl font-bold">Successfully</h3>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -181,7 +226,7 @@
             <p>History</p>
         </div>
     </main>
-    
+
     <script src="./JavaScript/functionality.js"></script>
     <script src="./JavaScript/features.js"></script>
 </body>
