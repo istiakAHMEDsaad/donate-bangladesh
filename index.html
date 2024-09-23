@@ -11,6 +11,12 @@
 
     <!-- !----------Add fav icon---------- -->
     <link rel="shortcut icon" href="./assets/coin.png" type="image/x-icon">
+
+    <style>
+        .myLime{
+            background-color: #B4F461;
+        }
+    </style>
 </head>
 
 <body class="font-lexend">
@@ -45,7 +51,7 @@
                     <div class="order-2 md:order-none flex flex-row items-center md:justify-normal justify-center text-xl font-semibold gap-x-3"
                         style="color: rgba(17, 17, 17, 0.70);">
                         <img src="./assets/coin.png" alt="">
-                        <p><span>5500</span> BDT</p>
+                        <p><span id="main-balance">5500</span> BDT</p>
                     </div>
                 </div>
             </div>
@@ -55,19 +61,19 @@
         <div class="relative z-10 flex flex-row items-center justify-center gap-x-4 md:py-6 py-4">
             <!-- bg-[#B4F461] -->
             <button id="donate-btn"
-                class="py-4 px-8 border transition rounded-lg text-xl font-semibold text-[#111] bg-[#B4F461] cursor-pointer"
-                style="border-color: rgba(17, 17, 17, 0.30); color: rgba(17, 17, 17, 0.70);">Donation</button>
+                class="py-4 px-8 rounded-lg text-xl font-semibold text-[#111] bg-[#B4F461] cursor-pointer">Donation
+            </button>
 
-            <button class="py-4 px-8 bg-white border rounded-lg text-xl font-medium cursor-pointer"
-                style="border-color: rgba(17, 17, 17, 0.30); color: rgba(17, 17, 17, 0.70);">History</button>
+            <button id="history-btn" class="py-4 px-8 border rounded-lg text-xl font-medium cursor-pointer">History
+            </button>
         </div>
         <div class="divide-gray-400"></div>
     </header>
 
     <!-- !----------Main Part---------- -->
     <main class="">
-        <!-- ?Main Container -->
-        <div class="md:container mx-auto">
+        <!-- ? Main Container -->
+        <div id="donate-section" class="md:container mx-auto">
 
             <!-- ****Image 1**** -->
             <div class="lg:px-16 md:px-0 mb-8">
@@ -83,7 +89,7 @@
                         <div style="color: rgba(17, 17, 17, 0.70);"
                             class="flex flex-row text-base font-normal gap-x-2 items-center">
                             <img src="./assets/coin.png" alt="">
-                            <p><span>2500</span> BDT</p>
+                            <p><span id="noakhali-balance">2500</span> BDT</p>
                         </div>
                         <h2 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
                         <p style="color: rgba(17, 17, 17, 0.70);" class="text-base font-light md:mb-0 mb-4">
@@ -92,9 +98,9 @@
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="noakhali-input" type="text" autocomplete="off" placeholder="Write Donation Amount"
                             class="block md:mb-0 mb-4 input input-bordered w-full" />
-                        <button
+                        <button id="noakhali-donate-button"
                             class="block bg-[#B4F461] py-4 px-8 rounded-lg text-xl font-semibold text-[#111] hover:bg-gray-400 transition">Donate
                             Now</button>
                     </div>
@@ -115,7 +121,7 @@
                         <div style="color: rgba(17, 17, 17, 0.70);"
                             class="flex flex-row text-base font-normal gap-x-2 items-center">
                             <img src="./assets/coin.png" alt="">
-                            <p><span>600</span> BDT</p>
+                            <p><span id="feni-balance">600</span> BDT</p>
                         </div>
                         <h2 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                         <p style="color: rgba(17, 17, 17, 0.70);" class="text-base font-light md:mb-0 mb-4">
@@ -126,9 +132,9 @@
                             counts towards making a real difference. Please consider donating today to assist those in
                             urgent need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="feni-input" type="text" autocomplete="off" placeholder="Write Donation Amount"
                             class="block md:mb-0 mb-4 input input-bordered w-full" />
-                        <button
+                        <button id="feni-donate-button"
                             class="block bg-[#B4F461] py-4 px-8 rounded-lg text-xl font-semibold text-[#111] hover:bg-gray-400 transition">Donate
                             Now</button>
                     </div>
@@ -149,7 +155,7 @@
                         <div style="color: rgba(17, 17, 17, 0.70);"
                             class="flex flex-row text-base font-normal gap-x-2 items-center">
                             <img src="./assets/coin.png" alt="">
-                            <p><span>2400</span> BDT</p>
+                            <p><span id="quota-balance">2400</span> BDT</p>
                         </div>
                         <h2 class="text-xl font-bold">Aid for Injured in the Quota Movement</h2>
                         <p style="color: rgba(17, 17, 17, 0.70);" class="text-base font-light md:mb-0 mb-4">
@@ -160,17 +166,22 @@
                             donation plays a vital role in alleviating their suffering and aiding in their recovery.
                             Please consider making a donation to support these brave individuals in their time of need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="quota-input" type="text" placeholder="Write Donation Amount" autocomplete="off"
                             class="block md:mb-0 mb-4 input input-bordered w-full" />
-                        <button
+                        <button id="quota-donate-button"
                             class="block bg-[#B4F461] py-4 px-8 rounded-lg text-xl font-semibold text-[#111] hover:bg-gray-400 transition">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- ? History Section -->
+        <div id="history-section" class="md:container mx-auto lg:px-16">
+            <p>History</p>
+        </div>
     </main>
-    <script src="./JavaScript/main.js"></script>
+    <script src="./JavaScript/features.js"></script>
 </body>
 
 </html>
